@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Coathli's Faith</title>
+  
+  <link rel="stylesheet" href="../novela/stylesCOPIA.css">
+</head>
+<body>
+
+  <!-- Video pre-reposo - Fondo para inicio default de la pantlla de inicio 1-->
+  <video id="backgroundVideoInicio1" autoplay muted loop>
+    <!-- Video de prueba para revisar funcionamiento del sistema-->
+    <source src="../novela/videos/candles-on-loop.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <!--  Transición simple con pantalla negra desvanecida-->
+  <div id="transicionInicio"></div>
+
+  <!-- Menú de Inicio 1-->
+  <div id="menuInicio1">
+    <!-- Botón para el inicio del juego -->
+    <button onclick="jugar()">Jugar</button>
+    <!-- Botón para los créditos del juego -->
+    <button onclick="creditos()">Créditos</button>
+    <!-- Botón para el salir del juego - PENDIENTE -->
+    <button onclick="salir()">Salir</button>
+  </div>
+
+  <!-- INICIO 2 - pantalla Jugar con Continuar / Nueva partida / Episodios -->
+<div id="menuInicio2" style="display:none; text-align:center; z-index:1;">
+  <!-- Botón para continuar partida (puede estar inactivo si no hay partida) -->
+  <button onclick="continuarPartida()" id="btnContinuar" class="inactivo">Continuar</button>
+  <!-- Botón para nueva partida -->
+  <button onclick="nuevaPartida()" id="btnNueva">Nueva partida</button>
+  <!-- Botón para episodios -->
+  <button onclick="episodios()" id="btnEpisodios">Episodios</button>
+</div>
+
+<!-- Botón Salir en esquina (visible en Inicio 2) -->
+<button id="btnSalirEsquina" class="boton-volver" style="display:none">Salir</button>
+
+
+  <!-- Cinemática de inicio - Cinématica obligatoria -->
+  <video id="cinematica1" autoplay>
+    <source src="../novela/videos/cinematica-inicio.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+
+  <div id="escenario">
+    <div id="personaje-contenedor">
+      <img id="personaje" src="../novela/img/personaje-parado.jpeg" alt="Personaje">
+      <video id="personajeCamina" loop muted>
+        <source src="../novela/videos/personaje-caminar.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <script src="../novela/scriptCOPIA.js"></script>
+
+</body>
+</html>
